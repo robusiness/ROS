@@ -66,11 +66,15 @@ function open() {
 function openWelcome() {
     document.getElementById("window").style.display = "block";
 }
+function secret() {
+    window.location.href = "./secret.html";
+}
 
 document.getElementById("windowX").addEventListener("click", close);
 document.getElementById("window1X").addEventListener("click", close1);
 document.getElementById("houseIcon").addEventListener("click", openWelcome);
 document.getElementById("calendarIcon").addEventListener("click", open);
+window.addEventListener("dblclick", secret);
 setInterval(setTime, 1000);
 setInterval(setDate, 1000);
 let fontSize = calculateFontSize(window.innerWidth, window.innerHeight);
